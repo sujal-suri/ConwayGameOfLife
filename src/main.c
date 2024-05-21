@@ -5,12 +5,14 @@
 #include "raylib.h"
 
 // -----------------------------------------Constants Declaration---------------------------------------------//
+
 #define SCREEN_HEIGHT 500
 #define SCREEN_WIDTH 1000
 #define CELL_PER_ROW 50
 #define CELL_PER_COLUMN 25
-#define DEAD_COLOR BLUE
+#define DEAD_COLOR LIGHTGRAY
 #define ALIVE_COLOR RAYWHITE
+#define BACKGROUND_COLOR WHITE
 #define MARGIN 1
 
 // ----------------------------------------------------------------------------------------------------------//
@@ -76,7 +78,7 @@ int main(){
 
 void DrawGameOfLife(void){
 	BeginDrawing();
-	ClearBackground(LIGHTGRAY);
+	ClearBackground(BACKGROUND_COLOR);
 	PrintGameOfLife();
 	AlterCells();
 	if(!pause){
